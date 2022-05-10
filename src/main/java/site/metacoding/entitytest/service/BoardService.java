@@ -1,5 +1,7 @@
 package site.metacoding.entitytest.service;
 
+import java.util.List;
+
 import org.hibernate.Hibernate;
 import org.springframework.stereotype.Service;
 
@@ -31,5 +33,10 @@ public class BoardService {
 
     public BoardDetailRespDto 좋아요포함상세보기(Integer id) {
         return boardImplRepository.mFindDetail(id);
+    }
+
+    public List<BoardDetailRespDto> 전체보기() {
+        return boardImplRepository.mFindAll();
+        // return boardImplRepository.mFindAllQLRM();
     }
 }
